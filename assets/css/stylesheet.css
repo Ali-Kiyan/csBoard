@@ -463,7 +463,7 @@ template {
   color:black;
   border: black 0.5px solid;
   padding: 8px 20px;
-  border-radius: 0px;
+  border-radius: 50px;
   margin-top: 20px;
   width: 100px;
 }
