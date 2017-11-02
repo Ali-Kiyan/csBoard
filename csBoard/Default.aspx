@@ -7,7 +7,7 @@
 <header id="showcase">
   <h1>Welcom to csBoard</h1>
   <p>Online interactive board for professional collaboration</p>
-  <a href="#" class="button">Enter</a>
+  <a href="Login.aspx" class="button">Enter</a>
 </header>
 
 
