@@ -16,6 +16,12 @@ body {
   margin: 0;
   font-family: 'Dosis', sans-serif;
 }
+.navbar {
+  margin-bottom: 0 !important;
+}
+nav{
+    margin-bottom: 0 !important;
+}
 
 /**
  * Add the correct display in IE 9-.
