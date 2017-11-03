@@ -8,6 +8,7 @@ using System.Data;
 
 public partial class Login : System.Web.UI.Page
 {
+    String role_id = "";
     private Boolean authenticatedviaForms()
     {
         if (txt_user.Text == "ali" && txt_pass.Text == "a")
@@ -27,13 +28,12 @@ public partial class Login : System.Web.UI.Page
             if (txt_user.Text == System.Convert.ToString(row["username"]) && txt_pass.Text == System.Convert.ToString(row["password"]))
             {
                 lbl_result.Text = System.Convert.ToString(row["username"]);
-                String role_id = System.Convert.ToString(row["role_id"]);
-                return false;
+                role_id = System.Convert.ToString(row["role_id"]);
+                return true;
             }
             else
             {
-                lbl_result.Text = "Failed";
-                return false;
+                continue;
             }
 
         }
@@ -47,13 +47,31 @@ public partial class Login : System.Web.UI.Page
 
     protected void btn_login_Click(object sender, EventArgs e)
     {
+
         if (authenticatedviaForms())
         {
             System.Web.Security.FormsAuthentication.RedirectFromLoginPage(txt_user.Text, false);
         }
         if (authenticateviaDB())
         {
+            if (role_id == "1")
+            {
+                Response.Redirect("/sysAdmin/adminDashboard.aspx");
+            }
+            if (role_id == "2")
+            {
+                Response.Redirect("/ProjectManager/ProjectManagerDashboard.aspx");
+            }
+            if (role_id == "3")
+            {
+                Response.Redirect("/Designer/DesignerDashboard.aspx");
+            }
+            if (role_id == "4")
+            {
+                Response.Redirect("/Client/ClientDashboard.aspx");
+            }
             System.Web.Security.FormsAuthentication.RedirectFromLoginPage(txt_user.Text, false);
+
         }
     }
 
