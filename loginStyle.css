@@ -40,9 +40,9 @@ body .login {
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
   position: relative;
-  width: 240px;
+  width: 440px;
   border-top: 2px solid #5d5454;
-  height: 300px;
+  height: 500px;
   position: absolute;
   left: 0;
   right: 0;
