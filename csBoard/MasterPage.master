@@ -7,18 +7,22 @@
     <title></title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="css/bootstrap-3.3.2-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-3.3.2-dist/css/bootstrap-theme.min.css">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="css/bootstrap-3.3.2-dist/css/bootstrap.min.js"></script>
+    <script src="/css/bootstrap-3.3.2-dist/css/bootstrap.min.js"></script>
 
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <link rel="stylesheet" href="/assets/css/stylesheet.css">
+
+    <!-- Animation -->
+    <link rel="stylesheet" href="/assets/css/animate.css">
+
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -97,12 +101,12 @@
         <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
 
 </body>
 </html>

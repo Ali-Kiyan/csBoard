@@ -56,22 +56,30 @@ public partial class Login : System.Web.UI.Page
         {
             if (role_id == "1")
             {
-                Response.Redirect("/sysAdmin/adminDashboard.aspx");
+                System.Web.Security.FormsAuthentication.RedirectFromLoginPage(txt_user.Text, false);
+                Response.Redirect("/sysAdmin/adminDashboard.aspx"); 
             }
             if (role_id == "2")
             {
+                System.Web.Security.FormsAuthentication.RedirectFromLoginPage(txt_user.Text, false);
                 Response.Redirect("/ProjectManager/ProjectManagerDashboard.aspx");
             }
             if (role_id == "3")
             {
+                System.Web.Security.FormsAuthentication.RedirectFromLoginPage(txt_user.Text, false);
                 Response.Redirect("/Designer/DesignerDashboard.aspx");
             }
             if (role_id == "4")
             {
+                System.Web.Security.FormsAuthentication.RedirectFromLoginPage(txt_user.Text, false);
                 Response.Redirect("/Client/ClientDashboard.aspx");
             }
             System.Web.Security.FormsAuthentication.RedirectFromLoginPage(txt_user.Text, false);
 
+        }
+        else
+        {
+            lbl_result.Text = "Username and password don't exist. Please try again";
         }
     }
 

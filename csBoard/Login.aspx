@@ -7,7 +7,7 @@
 
 
     <link rel="stylesheet" href="assets/css/loginStyle.css">
-        <div class='login'>
+        <div class='login animated fadeInUpBig'>
           <div class='login_title'>
             <span>Login to your csBoard account</span>
           </div>
@@ -28,7 +28,7 @@
               <div class='validation'>
                 <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
               </div>
-            <asp:TextBox ID="txt_pass" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txt_pass" runat="server" type="password"></asp:TextBox>
             </div>
             <div class='login_fields__submit'>
                 <asp:Button ID="btn_login" runat="server" Text="Login !" OnClick="btn_login_Click" />
