@@ -12,9 +12,4 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
     }
 
-    protected void btn_logout_admin_Click(object sender, EventArgs e)
-    {
-        System.Web.Security.FormsAuthentication.SignOut();
-        Response.Redirect("/Login.aspx?ReturnUrl=" + Server.UrlEncode(Request.Path));
-    }
 }

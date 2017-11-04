@@ -80,7 +80,7 @@ public partial class Login : System.Web.UI.Page
         }
         else
         {
-            lbl_result.Text = "Username and password don't exist. Please try again";
+            lbl_result.Text = "username and/or password does not match, Please try again";
         }
     }
 

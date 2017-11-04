@@ -9,6 +9,8 @@ public partial class Designer_DesignerDashboard : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        lbl_user.Text = User.Identity.Name;
+        Session["username"] = User.Identity.Name;
+        Session.Timeout = 30;
     }
 }
