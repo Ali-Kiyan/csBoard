@@ -29,6 +29,7 @@ public partial class Login : System.Web.UI.Page
             {
                 lbl_result.Text = System.Convert.ToString(row["username"]);
                 role_id = System.Convert.ToString(row["role_id"]);
+                Session["role_id"] = role_id;
                 return true;
             }
             else

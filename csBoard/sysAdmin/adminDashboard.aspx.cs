@@ -5,10 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class adminDashboard : System.Web.UI.Page
+public partial class sysAdmin_AdminDashboard : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        lbl_user.Text = User.Identity.Name;
+        Session["username"] = User.Identity.Name;
+        Session.Timeout = 30;
     }
 }
