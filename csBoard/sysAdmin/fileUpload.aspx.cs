@@ -18,10 +18,11 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
         if (file_uploader.HasFile)
         {
             file_uploader.PostedFile.SaveAs(Server.MapPath("~/assets/images/") + file_uploader.FileName);
+
         }
         else
         {
-            lbl_result.Text = "No file has been Selected. Please try again."
+            lbl_result.Text = "No file has been Selected. Please try again.";
         }
        
 
