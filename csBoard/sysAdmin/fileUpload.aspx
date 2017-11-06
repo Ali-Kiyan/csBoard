@@ -8,6 +8,7 @@
         <asp:Button ID="btn_upload" runat="server" CssClass="btn btn-primary" Text="Upload" Width="201px" OnClick="btn_upload_Click"/>
         <br />
         <asp:Label ID="lbl_result" runat="server" Text="Label"></asp:Label>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT [file_id], [filename], [filePath], [fileSize], [fileType], [user_id] FROM [files]"></asp:SqlDataSource>
     </div>
 
 </asp:Content>

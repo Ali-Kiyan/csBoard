@@ -9,6 +9,7 @@ using System.Data;
 public partial class Login : System.Web.UI.Page
 {
     String role_id = "";
+    int user_id=0;
     private Boolean authenticatedviaForms()
     {
         if (txt_user.Text == "ali" && txt_pass.Text == "a")
@@ -29,7 +30,9 @@ public partial class Login : System.Web.UI.Page
             {
                 lbl_result.Text = System.Convert.ToString(row["username"]);
                 role_id = System.Convert.ToString(row["role_id"]);
+                user_id = System.Convert.ToInt32(row["user_id"]);
                 Session["role_id"] = role_id;
+                Session["user_id"] = user_id;
                 return true;
             }
             else
