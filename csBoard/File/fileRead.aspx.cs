@@ -18,7 +18,7 @@ public partial class File_fileRead : System.Web.UI.Page
         else{
             lbl_result.CssClass = "alert-danger";
             lbl_result.Text = "You don't have the right access";
-            Response.Redirect("/ProjectManager/ProjectManagerDashboard.aspx",true);
+            Response.Redirect("/Login.aspx",true);
         }
     }
 

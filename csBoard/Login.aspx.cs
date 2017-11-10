@@ -51,6 +51,10 @@ public partial class Login : System.Web.UI.Page
 
     protected void btn_login_Click(object sender, EventArgs e)
     {
+        if (IsPostBack)
+        {
+            lbl_result.Text = "Please log in to have access to this page";
+        }
 
         if (authenticatedviaForms())
         {

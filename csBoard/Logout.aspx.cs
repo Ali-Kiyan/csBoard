@@ -10,6 +10,7 @@ public partial class Logout : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         System.Web.Security.FormsAuthentication.SignOut();
+        Session.Abandon();
         Response.Redirect("/Login.aspx?ReturnUrl=" + Server.UrlEncode(Request.Path));
     }
 }
