@@ -6,5 +6,36 @@
     <p>
     <br />
 </p>
+<asp:Label ID="lbl_result" runat="server" CssClass="alert"></asp:Label>
+<br />
+<br />
+<asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="table animated fadeInUp" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+    <Columns>
+        <asp:CommandField ShowSelectButton="True" />
+        <asp:BoundField DataField="filename" HeaderText="filename" SortExpression="filename" />
+        <asp:BoundField DataField="fileType" HeaderText="fileType" SortExpression="fileType" />
+        <asp:BoundField DataField="fileSize" HeaderText="file Size (KB)" SortExpression="fileSize" />
+        <asp:BoundField DataField="name" HeaderText="Created By" SortExpression="name" />
+    </Columns>
+    <EditRowStyle BackColor="#999999" />
+    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+</asp:GridView>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT files.filename, files.fileType, files.fileSize, users.name FROM files INNER JOIN users ON files.user_id = users.user_id"></asp:SqlDataSource>
 </asp:Content>
 

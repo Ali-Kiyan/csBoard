@@ -28,12 +28,13 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
             SqlCommand cmd = new SqlCommand("INSERT INTO files (filename,filePath,fileSize,fileType,user_id) values('" + file_uploader.FileName + "','" + "~/assets/files/" + file_uploader.FileName + "'," + file_uploader.PostedFile.ContentLength +",'" + file_uploader.PostedFile.ContentType + "',"  + Session["user_id"] + ")", con);
             cmd.ExecuteNonQuery();
             con.Close();
-            lbl_result.Text = "Successfully added"];
+            lbl_result.Text = "Successfully added";
 
         }
         else
         {
             lbl_result.Text = "No file has been Selected. Please try again.";
+          
         }
        
 
