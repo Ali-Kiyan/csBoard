@@ -13,7 +13,7 @@ public partial class sysAdmin_Register : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        con.Open();
+   
     }
 
     protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
@@ -23,8 +23,18 @@ public partial class sysAdmin_Register : System.Web.UI.Page
 
     protected void submit_Click(object sender, EventArgs e)
     {
-        SqlCommand cmd = new SqlCommand("INSERT INTO users (username, password, name, role_id) values ('" + txt_userName.Text + "','" + txt_password.Text + "' ,'" + txt_name + "','" + RoleDropDown.SelectedItem.Text + "')", con);
-        cmd.ExecuteNonQuery();
+        SqlCommand cmd = new SqlCommand("INSERT INTO users (usernae, password, name, role_id) values ('" + txt_userName.Text + "','" + txt_password.Text + "' ,'" + txt_name + "','" + RoleDropDown.SelectedItem.Text + "')", con);
+        try
+        {
+            con.Open();
+            cmd.ExecuteNonQuery();
+        }
+        catch(Exception err)
+        {
+            Lbl_result.Text = System.Convert.ToString(err);
+            Lbl_result.CssClass = "alert alert-danger animated bounceInDown";
+        }
+
         con.Close();
     }
 }

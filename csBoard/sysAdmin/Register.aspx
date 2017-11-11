@@ -8,9 +8,7 @@
     <br />
 </p>
 
-    &nbsp;<div style="margin-left: 50%;color: black;" class="animated bounceInDown">
-        <asp:Label ID="Lbl_result" runat="server" Text=""></asp:Label>
-
+    &nbsp;<div style="margin-left: 50%;color: black;" class="animated bounceInRight">
         &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT role_id FROM roles"></asp:SqlDataSource>
         <asp:TextBox ID="txt_userName" runat="server" CssClass="input-group" Width="50%" placeholder="please enter your username"></asp:TextBox>
         <asp:TextBox ID="txt_password" runat="server" CssClass="input-group" Width="50%" placeholder="please enter your password" Type="password"></asp:TextBox>
@@ -24,6 +22,7 @@
         </asp:DropDownList>
         <br />
         <asp:Button ID="submit" runat="server" Text="Submit !" OnClick="submit_Click" CssClass="input-group  btn btn-primary" Width="50%"/>
+         <asp:Label ID="Lbl_result" runat="server" Text="" Width="50%" style="overflow: hidden"></asp:Label>
     </div>
 
 
