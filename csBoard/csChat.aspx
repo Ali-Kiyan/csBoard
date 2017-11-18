@@ -16,8 +16,8 @@
     </style>
 
     <div class="container chat-thread">
-        <input type="text" id="message" />
-        <input type="button" id="sendmessage" value="Send" />
+        <input type="text" id="message" class="animated bounceInLeft"/>
+        <input type="button" id="sendmessage" class="animated bounceInRight" value="Send" />
         <input type="hidden" id="displayname" />
         <ul id="discussion">
         </ul>

@@ -82,8 +82,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">csStaff <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                     <li><a href="/sysAdmin/adminDashboard.aspx">Admin</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li><a href="csChat.aspx">csChat</a></li>
+                    <li><a href="/File/fileRead.aspx">Files</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="/logout.aspx">Logout</a></li>
                     </ul>
@@ -115,6 +115,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/assets/js/jquery-3.2.1.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -129,6 +131,7 @@
     <script src="signalr/hubs"></script>
     <!--Add script to update the page and send messages.--> 
     <script src="/assets/js/chatScript.js"></script>
+    
 
 </body>
 </html>

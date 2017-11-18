@@ -20,7 +20,16 @@
   border-radius: 10px;
   background-color: rgba(25, 147, 147, 0.2);
 }
+.chat-thread #message{
+    width: 30%;
+    padding: 10px;
 
+}
+.chat-thread #sendmessage{
+    width: 10%;
+    padding: 10px;
+
+}
 .chat-thread {
   list-style: none;
   overflow-y: scroll;
