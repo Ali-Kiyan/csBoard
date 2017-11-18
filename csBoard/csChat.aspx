@@ -4,7 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <title>SignalR Simple Chat</title>
+    <title>csChat</title>
+    <link rel="stylesheet" href="/assets/css/chatStyle.css">
     <style type="text/css">
         .container {
             background-color: #99CCFF;
@@ -14,12 +15,13 @@
         }
     </style>
 
-    <div class="container">
+    <div class="container chat-thread">
         <input type="text" id="message" />
         <input type="button" id="sendmessage" value="Send" />
         <input type="hidden" id="displayname" />
         <ul id="discussion">
         </ul>
     </div>
+
 </asp:Content>
 
