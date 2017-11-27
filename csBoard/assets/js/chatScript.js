@@ -24,3 +24,8 @@
             });
         });
     });
+
+//emoji 
+    var msg = String.fromCodePoint( 0x1f354 );
+    document.querySelector('#message').value = msg;
+
