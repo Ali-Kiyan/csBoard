@@ -111,7 +111,7 @@
                       <a href="/sysAdmin/AdminDashboard.aspx"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                   </li>
                   <li>
-                      <a href="#"><i class="fa fa-wrench fa-fw"></i> Users<span class="fa arrow"></span></a>
+                      <a href="#"><i class="fa fa-user-circle-o fa-fw"></i> Users<span class="fa arrow"></span></a>
                       <ul class="nav nav-second-level">
                           <li>
                               <a href="{{route('admin.users.index')}}">All Users</a>
@@ -126,7 +126,7 @@
 
 
                   <li>
-                      <a href="#"><i class="fa fa-wrench fa-fw"></i> Files<span class="fa arrow"></span></a>
+                      <a href="#"><i class="fa fa-file-archive-o fa-fw"></i> Files<span class="fa arrow"></span></a>
                       <ul class="nav nav-second-level">
                           <li>
                               <a href="/sysAdmin/fileUpload.aspx">Upload files</a>
@@ -139,29 +139,35 @@
                   </li>
 
                   <li>
-                      <a href="#"><i class="fa fa-wrench fa-fw"></i> Categories<span class="fa arrow"></span></a>
+                      <a href="#"><i class="fa fa-paint-brush fa-fw"></i> Workspace Customization<span class="fa arrow"></span></a>
                       <ul class="nav nav-second-level">
                           <li>
-                              <a href="{{route('admin.categories.index')}}">All Categories</a>
+                                                  <asp:Button ID="Button3" runat="server" Text="Dark Navigation Menu " />
+                                                  <br />
+                                                  <asp:Button ID="Button4" runat="server" Text="Dark Side Menu" />
+                                                  <br />
+                                                  <asp:Button ID="Button5" runat="server" Text="Dark Background" />
+                
                           </li>
                           <li>
-                              <a href="{{route('admin.categories.create')}}">Create Category</a>
+                              <a href="#">Light Menu <span class="fa arrow"></span></a>
+                              <ul class="nav nav-third-level">
+                                  <li>
+                                            <asp:Button ID="Button6" runat="server" Text="Light Navigation Menu" />
+                                            <br />
+                                            <asp:Button ID="Button7" runat="server" Text="Light Side Menu" />
+                                            <br />
+                                            <asp:Button ID="Button8" runat="server" Text="Light Background" />
+                                  </li>
+                              </ul>
+                              <!-- /.nav-third-level -->
                           </li>
                       </ul>
                       <!-- /.nav-second-level -->
                   </li>
 
                   <li>
-                      <a href="#"><i class="fa fa-wrench fa-fw"></i> Media<span class="fa arrow"></span></a>
-                      <ul class="nav nav-second-level">
-                          <li>
-                              <a href="{{route('admin.media.index')}}">All Media</a>
-                          </li>
-                          <li>
-                              <a href="{{route('admin.media.create')}}">Update Media</a>
-                          </li>
-                      </ul>
-                      <!-- /.nav-second-level -->
+                      <a href="/csChat.aspx"><i class="fa fa-send-o"></i> csChat</a>
                   </li>
 
                   <li>
@@ -206,30 +212,7 @@
                       </ul>
                       <!-- /.nav-second-level -->
                   </li>
-                  <li>
-                      <a href="#"><i class="fa fa-sitemap fa-fw"></i> Files<span class="fa arrow"></span></a>
-                      <ul class="nav nav-second-level">
-                          <li>
-                              <a href="#">Read all files</a>
-                          </li>
-                          <li>
-                              <a href="#">Delete</a>
-                          </li>
-                          <li>
-                              <a href="#">Live Edit <span class="fa arrow"></span></a>
-                              <ul class="nav nav-third-level">
-                                  <li>
-                                      <a href="#">Excel</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">Text files</a>
-                                  </li>
-                              </ul>
-                              <!-- /.nav-third-level -->
-                          </li>
-                      </ul>
-                      <!-- /.nav-second-level -->
-                  </li>
+
                   <li>
                       <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                       <ul class="nav nav-second-level">
