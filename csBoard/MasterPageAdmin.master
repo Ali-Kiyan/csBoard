@@ -44,7 +44,7 @@
 
 
 </head>
-<body role="document">
+<body role="document" ID="bodyMain" runat="server">
     <form id="form1" runat="server">
 
     <!-- Fixed navbar -->
@@ -93,9 +93,9 @@
       </div><!-- /.container-fluid -->
       </nav>
       <div id="wrapper">
-      <div class="navbar-default sidebar animated fadeInLeft" role="navigation">
+      <div class="navbar-default sidebar animated fadeInUp" role="navigation">
           <div class="sidebar-nav navbar-collapse">
-              <ul class="nav" id="side-menu" style="background-color:#303030!important;">
+              <ul class="nav" id="side-menu" style="background-color:#303030;" >
                   <li class="sidebar-search">
                       <div class="input-group custom-search-form">
                           <input type="text" class="form-control" placeholder="Search...">
@@ -142,22 +142,18 @@
                       <a href="#"><i class="fa fa-paint-brush fa-fw"></i> Workspace Customization<span class="fa arrow"></span></a>
                       <ul class="nav nav-second-level">
                           <li>
-                                                  <asp:Button ID="Button3" runat="server" Text="Dark Navigation Menu " />
+                                                  <asp:Button ID="dark" runat="server" Text="Dark Mode" OnClick="dark_Click" />
                                                   <br />
-                                                  <asp:Button ID="Button4" runat="server" Text="Dark Side Menu" />
+                                                  <asp:Button ID="fontS" runat="server" Text="Font Size" OnClick="fontS_Click" />
                                                   <br />
-                                                  <asp:Button ID="Button5" runat="server" Text="Dark Background" />
-                
+                                              
                           </li>
                           <li>
-                              <a href="#">Light Menu <span class="fa arrow"></span></a>
+                              <a href="#">Direction <span class="fa arrow"></span></a>
                               <ul class="nav nav-third-level">
                                   <li>
-                                            <asp:Button ID="Button6" runat="server" Text="Light Navigation Menu" />
-                                            <br />
-                                            <asp:Button ID="Button7" runat="server" Text="Light Side Menu" />
-                                            <br />
-                                            <asp:Button ID="Button8" runat="server" Text="Light Background" />
+                                      <asp:Button ID="rtl" runat="server" Text="Right To Left" OnClick="rtl_Click" />
+                                      <asp:Button ID="ltr" runat="server" Text="Left To Right" OnClick="ltr_Click" />
                                   </li>
                               </ul>
                               <!-- /.nav-third-level -->
