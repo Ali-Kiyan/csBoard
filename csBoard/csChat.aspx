@@ -19,8 +19,18 @@
         <input type="text" id="message" class="animated bounceInLeft"/>
         <input type="button" id="sendmessage" class="animated bounceInRight" value="Send" />
         <input type="hidden" id="displayname" />
+        <button id="laugh" type="button">😁</button>
+        <button id="sad" type="button">😭</button>
+        <button id="smile"  type="button">😊</button>
+        <button id="serious" type="button">😁</button>
+        <button id="confused" type="button">😭</button>
+        <button id="smirk"  type="button">😊</button>
+        <button id="cry" type="button">😁</button>
+        <button id="angry" type="button">😭</button>
+        <button id="Happy"  type="button">😊</button>
         <ul id="discussion">
         </ul>
+        
     </div>
 
 </asp:Content>
