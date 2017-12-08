@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 public partial class File_fileRead : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -25,5 +26,18 @@ public partial class File_fileRead : System.Web.UI.Page
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
 
+    }
+
+    protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if(e.CommandName == "Download")
+        {
+            //clearing any response
+            Response.Clear();
+            Response.ContentType = "application/octect-stream";
+            Response.AppendHeader("content-disposition", "filename=" + e.CommandArgument);
+            Response.TransmitFile(Server.MapPath("~/assets/files/") + e.CommandArgument);
+            Response.End();
+        }
     }
 }

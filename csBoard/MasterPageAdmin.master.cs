@@ -9,7 +9,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        // read from db and then apply the customizat
     }
 
     protected void dark_Click(object sender, EventArgs e)

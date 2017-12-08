@@ -9,11 +9,15 @@
 <asp:Label ID="lbl_result" runat="server" CssClass="alert"></asp:Label>
 <br />
 <br />
-<asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="table animated fadeInUp" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+<asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="table animated fadeInUp" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="GridView1_RowCommand">
     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     <Columns>
         <asp:CommandField ShowSelectButton="True" />
-        <asp:BoundField DataField="filename" HeaderText="filename" SortExpression="filename" />
+        <asp:TemplateField HeaderText="file Name">
+            <ItemTemplate>
+                <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("filename") %>' CommandName="Download" Text='<%# Eval("filename") %>'></asp:LinkButton>
+            </ItemTemplate>
+        </asp:TemplateField>
         <asp:BoundField DataField="fileType" HeaderText="fileType" SortExpression="fileType" />
         <asp:BoundField DataField="fileSize" HeaderText="file Size (KB)" SortExpression="fileSize" />
         <asp:BoundField DataField="name" HeaderText="Created By" SortExpression="name" />
