@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
 
 
 public partial class File_fileRead : System.Web.UI.Page
@@ -30,7 +32,8 @@ public partial class File_fileRead : System.Web.UI.Page
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        if(e.CommandName == "Download")
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["csBoardDBConnectionString"].ConnectionString);
+        if (e.CommandName == "Download")
         {
             //clearing any response
             Response.Clear();
@@ -38,6 +41,16 @@ public partial class File_fileRead : System.Web.UI.Page
             Response.AppendHeader("content-disposition", "filename=" + e.CommandArgument);
             Response.TransmitFile(Server.MapPath("~/assets/files/") + e.CommandArgument);
             Response.End();
+        }
+        if(e.CommandName == "deleteFile")
+        {
+            //clearing any response
+            Response.Clear();
+            System.IO.File.Delete(Server.MapPath("~/assets/files/") + e.CommandArgument);
+            SqlCommand cmd = new SqlCommand("DELETE FROM [files] WHERE filename = " + e.CommandArgument , con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Redirect("/File/fileRead.aspx");
         }
     }
 }

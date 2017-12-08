@@ -12,7 +12,11 @@
 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="table animated fadeInUp" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="GridView1_RowCommand">
     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     <Columns>
-        <asp:CommandField ShowSelectButton="True" />
+        <asp:TemplateField HeaderText="delete File">
+            <ItemTemplate>
+                <asp:Button ID="deleteButton" runat="server" CommandArgument='<%# Eval("filename") %>' CommandName="deleteFile" Text="Delete"/>
+            </ItemTemplate>
+        </asp:TemplateField>
         <asp:TemplateField HeaderText="file Name">
             <ItemTemplate>
                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("filename") %>' CommandName="Download" Text='<%# Eval("filename") %>'></asp:LinkButton>

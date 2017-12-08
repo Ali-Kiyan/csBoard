@@ -21,11 +21,10 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
     protected void btn_upload_Click(object sender, EventArgs e)
     {
         if (file_uploader.HasFile)
-        {
-    
+        { 
             file_uploader.PostedFile.SaveAs(Server.MapPath("~/assets/files/") + file_uploader.FileName);
-    
-            SqlCommand cmd = new SqlCommand("INSERT INTO files (filename,filePath,fileSize,fileType,user_id) values('" + file_uploader.FileName + "','" + "~/assets/files/" + file_uploader.FileName + "'," + file_uploader.PostedFile.ContentLength +",'" + file_uploader.PostedFile.ContentType + "',"  + Session["user_id"] + ")", con);
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO files (filename,filePath,fileSize,fileType,user_id) values('" + file_uploader.FileName + "','" + "~/assets/files/" + file_uploader.FileName + "'," + file_uploader.PostedFile.ContentLength + ",'" + file_uploader.PostedFile.ContentType + "'," + Session["user_id"] + ")", con);
             cmd.ExecuteNonQuery();
             con.Close();
             lbl_result.Text = "Successfully added";
