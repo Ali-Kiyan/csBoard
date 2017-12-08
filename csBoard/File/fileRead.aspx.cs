@@ -47,7 +47,7 @@ public partial class File_fileRead : System.Web.UI.Page
             //clearing any response
             Response.Clear();
             System.IO.File.Delete(Server.MapPath("~/assets/files/") + e.CommandArgument);
-            SqlCommand cmd = new SqlCommand("DELETE FROM [files] WHERE filename = " + e.CommandArgument , con);
+            SqlCommand cmd = new SqlCommand("DELETE FROM [files] WHERE filename = " + e.CommandArgument, con);
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("/File/fileRead.aspx");

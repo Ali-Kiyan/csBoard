@@ -14,7 +14,7 @@
     <Columns>
         <asp:TemplateField HeaderText="delete File">
             <ItemTemplate>
-                <asp:Button ID="deleteButton" runat="server" CommandArgument='<%# Eval("filename") %>' CommandName="deleteFile" Text="Delete"/>
+                <asp:Button ID="deleteButton" runat="server"  CommandName="deleteFile" Text='<%# Eval("filename") %>' CommandArgument='<%# Eval("filename") %>'/>
             </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField HeaderText="file Name">
