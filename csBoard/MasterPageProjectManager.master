@@ -79,18 +79,6 @@
                       <a href="/sysAdmin/AdminDashboard.aspx"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                   </li>
                   <li>
-                      <a href="#"><i class="fa fa-user-circle-o fa-fw"></i> Users<span class="fa arrow"></span></a>
-                      <ul class="nav nav-second-level">
-                          <li>
-                              <a href="/sysAdmin/allUsrs.aspx">All Users</a>
-                          </li>
-                      </ul>
-                      <!-- /.nav-second-level -->
-                  </li>
-
-
-
-                  <li>
                       <a href="#"><i class="fa fa-file-archive-o fa-fw"></i> Files<span class="fa arrow"></span></a>
                       <ul class="nav nav-second-level">
                           <li>

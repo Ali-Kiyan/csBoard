@@ -64,8 +64,6 @@
                 <li><a href="/ProjectManager/ProjectManagerDashboard.aspx">Project Manager</a></li>
                 <li><a href="/ProjectManager/DesignerDashboard.aspx">Designer</a></li>
                 <li><a href="/ProjectManager/ClientDashboard.aspx">Client</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="csChat.aspx">csChat</a></li>
               </ul>
             </li>
           </ul>
