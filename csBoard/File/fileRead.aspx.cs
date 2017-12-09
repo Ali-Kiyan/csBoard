@@ -16,13 +16,11 @@ public partial class File_fileRead : System.Web.UI.Page
         con.Open();
         if (System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2 ) 
         {
-            lbl_result.CssClass = "alert-success";
+            lbl_result.CssClass = "alert alert-info";
             lbl_result.Text = "All files in the database"; 
 
         }
         else{
-            lbl_result.CssClass = "alert-danger";
-            lbl_result.Text = "You don't have the right access";
             Response.Redirect("/Login.aspx",true);
         }
     }
