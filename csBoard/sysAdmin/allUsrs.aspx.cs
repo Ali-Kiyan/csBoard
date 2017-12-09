@@ -19,4 +19,9 @@ public partial class sysAdmin_allUsrs : System.Web.UI.Page
             Response.Redirect("/Login.aspx", true);
         }
     }
+
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }
