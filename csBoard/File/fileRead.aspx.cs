@@ -10,8 +10,10 @@ using System.Configuration;
 
 public partial class File_fileRead : System.Web.UI.Page
 {
+    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["csBoardDBConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
+        con.Open();
         if (System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2 ) 
         {
             lbl_result.CssClass = "alert-success";
@@ -32,7 +34,7 @@ public partial class File_fileRead : System.Web.UI.Page
 
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["csBoardDBConnectionString"].ConnectionString);
+      
         if (e.CommandName == "Download")
         {
             //clearing any response
@@ -47,7 +49,7 @@ public partial class File_fileRead : System.Web.UI.Page
             //clearing any response
             Response.Clear();
             System.IO.File.Delete(Server.MapPath("~/assets/files/") + e.CommandArgument);
-            SqlCommand cmd = new SqlCommand("DELETE FROM [files] WHERE filename = " + e.CommandArgument, con);
+            SqlCommand cmd = new SqlCommand("DELETE FROM files WHERE filename = '" + e.CommandArgument+"'", con);
             cmd.ExecuteNonQuery();
             con.Close();
             Response.Redirect("/File/fileRead.aspx");

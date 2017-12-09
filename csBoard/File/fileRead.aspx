@@ -14,7 +14,7 @@
     <Columns>
         <asp:TemplateField HeaderText="delete File">
             <ItemTemplate>
-                <asp:Button ID="deleteButton" runat="server"  CommandName="deleteFile" Text='<%# Eval("filename") %>' CommandArgument='<%# Eval("filename") %>'/>
+                <asp:Button ID="deleteButton" runat="server"  CommandName="deleteFile" Text="Delete" CommandArgument='<%# Eval("filename") %>'/>
             </ItemTemplate>
         </asp:TemplateField>
         <asp:TemplateField HeaderText="file Name">
@@ -37,7 +37,6 @@
     <SortedDescendingCellStyle BackColor="#FFFDF8" />
     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
 </asp:GridView>
-<br />
 <br />
 <br />
 <br />
