@@ -27,12 +27,12 @@
 
 //emoji 
     var laugh_emoji = String.fromCodePoint(0x1F602);
-    var msg = String.fromCodePoint(0x1F612);
+    var angry_emoji = String.fromCodePoint(0x1F612);
     var laugh_btn = document.getElementById('laugh').onclick = function () {
             document.querySelector('#message').value +=laugh_emoji;
     }
     var sad_btn = document.getElementById('sad').onclick = function () {
-        document.querySelector('#message').value = msg;
+        document.querySelector('#message').value += angry_emoji;
     }
  
 

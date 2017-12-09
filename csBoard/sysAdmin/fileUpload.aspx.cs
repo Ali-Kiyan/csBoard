@@ -14,8 +14,19 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+ 
         lbl_result.Text = System.Convert.ToString(file_uploader);
         con.Open();
+        if (System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2)
+        {
+            lbl_result.CssClass = "alert-info";
+            lbl_result.Text = "Share your file here";
+
+        }
+        else
+        {
+            Response.Redirect("/Login.aspx", true);
+        }
     }
 
     protected void btn_upload_Click(object sender, EventArgs e)
@@ -36,7 +47,6 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
           
         }
        
-
 
     }
 }
