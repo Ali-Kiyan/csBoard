@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
      <p>
-         <asp:Label ID="lbl_result" runat="server" CssClass="alert alert-info"></asp:Label>
+         <asp:Label ID="lbl_result" runat="server" CssClass = "alert-info animated fadeInLeft" Width="20%"></asp:Label>
      </p>
 <p>
          &nbsp;</p>
@@ -86,12 +86,7 @@
              <asp:Parameter Name="user_id" Type="Int32" />
          </UpdateParameters>
 </asp:SqlDataSource>
-</p>
-<p>
-     &nbsp;</p>
-<p>
-     <br />
-     </p>
+
     
 
 

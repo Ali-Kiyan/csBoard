@@ -11,13 +11,13 @@ public partial class sysAdmin_allUsrs : System.Web.UI.Page
     {
         if (System.Convert.ToInt32(Session["role_id"]) == 1)
         {
-            lbl_result.CssClass = "alert alert-info";
             lbl_result.Text = "All Users";
         }
         else
         {
             Response.Redirect("/Login.aspx", true);
         }
+      
     }
 
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
