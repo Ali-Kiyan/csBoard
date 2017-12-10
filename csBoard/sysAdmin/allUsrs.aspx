@@ -6,7 +6,7 @@
 
      <p>
          <asp:Label ID="lbl_result" runat="server" CssClass = "alert-info animated fadeInLeft" Width="20%"></asp:Label>
-     </p>
+         ---</p>
 <p>
          &nbsp;</p>
 <p>

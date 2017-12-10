@@ -8,16 +8,16 @@
     <br />
 </p>
 
-    &nbsp;<div style="margin-left: 50%;color: black;" class="animated bounceInRight">
+    &nbsp;<div style="margin-left: 30%;color: black;" class="animated bounceInRight">
         &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT role_id FROM roles"></asp:SqlDataSource>
         <asp:TextBox ID="txt_userName" runat="server" CssClass="input-group" Width="50%" placeholder="please enter your username"></asp:TextBox>
         <asp:TextBox ID="txt_password" runat="server" CssClass="input-group" Width="50%" placeholder="please enter your password" Type="password"></asp:TextBox>
         <asp:TextBox ID="txt_name" runat="server" CssClass="input-group" Width="50%"     placeholder="please enter your Name"></asp:TextBox>      
         <br />
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT [username], [password], [name], [role_id] FROM [users]"></asp:SqlDataSource>
-        <asp:Label ID="Label1" runat="server" Text="role ID" style="font-size: 2rem;"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="role ID" style="font-size: 2rem;color: whitesmoke;"></asp:Label>
         <br />
-        <asp:DropDownList Width="50%" ID="RoleDropDown" runat="server" DataSourceID="SqlDataSource1" DataTextField="role_id" DataValueField="role_id" CssClass="input">
+        <asp:DropDownList Width="50%" ID="RoleDropDown" runat="server" DataSourceID="SqlDataSource1" DataTextField="role_id" DataValueField="role_id" CssClass="input" >
         <asp:ListItem Selected="True">True</asp:ListItem>
         </asp:DropDownList>
         <br />
