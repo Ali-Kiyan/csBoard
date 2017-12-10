@@ -12,7 +12,7 @@
             border: 75px solid #afa3a3;
             padding: 20px;
             margin: 20px;
-            border-radius: 90px;
+            border-radius: 10px;
         }
     </style>
 

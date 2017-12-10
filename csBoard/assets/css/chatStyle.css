@@ -36,8 +36,13 @@ border-radius: 50px !important;
     width: 30%;
     padding: 10px;
     border: thin;
-    border-radius: 50px;
+    border-radius: 0px;
+    outline: none;
 
+
+}
+.chat-thread #message:focus{
+border: thick solid seagreen;
 }
 .chat-thread #sendmessage{
     width: 10%;
