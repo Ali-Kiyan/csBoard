@@ -7,6 +7,18 @@
   background-attachment: fixed;
 }
 
+.overlapped{
+    height: 100%;
+}
+
+.avatar{
+    display: inline-block;
+}
+.btn-avatar{
+border: thin;
+border-radius: 50px !important;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -23,12 +35,16 @@
 .chat-thread #message{
     width: 30%;
     padding: 10px;
-
+    border: thin;
+    border-radius: 50px;
 
 }
 .chat-thread #sendmessage{
     width: 10%;
     padding: 10px;
+    height: 100%;
+    border: thin;
+
 
 }
 .chat-thread {

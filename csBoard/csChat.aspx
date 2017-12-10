@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="/assets/css/chatStyle.css">
     <style type="text/css">
         .container {
-            background-color: #99CCFF;
-            border: thick solid #808080;
+            background-color: #4a4a4a;
+            border: 75px solid #afa3a3;
             padding: 20px;
             margin: 20px;
+            border-radius: 90px;
         }
     </style>
 
@@ -19,15 +20,17 @@
         <input type="text" id="message" class="animated bounceInLeft"/>
         <input type="button" id="sendmessage" class="animated bounceInRight" value="Send" />
         <input type="hidden" id="displayname" />
-        <button id="laugh" type="button">😁</button>
-        <button id="sad" type="button">😭</button>
-        <button id="smile"  type="button">😊</button>
-        <button id="serious" type="button">😁</button>
-        <button id="confused" type="button">😭</button>
-        <button id="smirk"  type="button">😊</button>
-        <button id="cry" type="button">😁</button>
-        <button id="angry" type="button">😭</button>
-        <button id="Happy"  type="button">😊</button>
+        <div class="animated fadeInRight avatar">
+            <button id="laugh" type="button" class="btn overlapped btn-info btn-avatar">😁</button>
+            <button id="sad" type="button" class="btn overlapped btn-avatar">😭</button>
+            <button id="smile"  type="button" class="btn overlapped btn-avatar" >😊</button>
+            <button id="serious" type="button" class="btn overlapped btn-avatar">😁</button>
+            <button id="confused" type="button" class="btn overlapped btn-danger btn-avatar">😭</button>
+            <button id="smirk"  type="button" class="btn overlapped btn-warning btn-avatar">😊</button>
+            <button id="cry" type="button" class="btn overlapped btn-avatar">😁</button>
+            <button id="angry" type="button" class="btn overlapped btn-avatar">😭</button>
+            <button id="Happy"  type="button" class="btn overlapped btn-avatar">😊</button>
+        </div>
         <ul id="discussion">
         </ul>
         

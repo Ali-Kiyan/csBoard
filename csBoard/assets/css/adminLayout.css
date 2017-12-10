@@ -4550,7 +4550,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #888;
-    height: 21px;
+    height: 1px;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
