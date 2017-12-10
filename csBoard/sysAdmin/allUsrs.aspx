@@ -34,7 +34,7 @@
              </asp:TemplateField>
              <asp:TemplateField HeaderText="password" SortExpression="password">
                  <EditItemTemplate>
-                     <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("password") %>'></asp:TextBox>
+                     <asp:TextBox ID="TextBox2" runat="server" Text='<%# Eval("password")  %>'></asp:TextBox>
                  </EditItemTemplate>
                  <ItemTemplate>
                      <asp:Label ID="Label3" runat="server" Text='<%# Bind("password") %>'></asp:Label>
