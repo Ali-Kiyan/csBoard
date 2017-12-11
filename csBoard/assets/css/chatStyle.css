@@ -7,6 +7,12 @@
   background-attachment: fixed;
 }
 
+.container {
+    background-color: #4a4a4a;
+    border: 75px solid #42363f;
+    padding: 20px;
+    border-radius: 10px;
+}
 .overlapped{
     height: 100%;
 }
@@ -56,7 +62,7 @@ border: thick solid seagreen;
   list-style: none;
   overflow-y: scroll;
   overflow-x: scroll;
-  width: 96%;
+  width: 100%;
 }
 
 

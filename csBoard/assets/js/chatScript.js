@@ -25,15 +25,34 @@
         });
     });
 
-//emoji 
-    var laugh_emoji = String.fromCodePoint(0x1F602);
-    var angry_emoji = String.fromCodePoint(0x1F612);
-    var laugh_btn = document.getElementById('laugh').onclick = function () {
-            document.querySelector('#message').value +=laugh_emoji;
-    }
-    var sad_btn = document.getElementById('sad').onclick = function () {
-        document.querySelector('#message').value += angry_emoji;
-    }
+   //Avatars Definition 
+    var Joy_avatar = String.fromCodePoint(0x1F602);
+    var Surprise_avatar = String.fromCodePoint(0x1F631);
+    var Fear_avatar = String.fromCodePoint(0x1F628);
+    var Sadness_avatar = String.fromCodePoint(0x1F622);
+    var Anger_avatar = String.fromCodePoint(0x1F621);
+    var Disgust_avatar = String.fromCodePoint(0x1F612);
+    //Appending to the input
+    var Joy_btn = document.getElementById('joy').onclick = function () {
+        document.querySelector('#message').value += Joy_avatar;
+    };
+    var Joy_btn = document.getElementById('surprise').onclick = function () {
+        document.querySelector('#message').value += Surprise_avatar;
+    };
+    var Joy_btn = document.getElementById('fear').onclick = function () {
+        document.querySelector('#message').value += Fear_avatar;
+    };
+    var Joy_btn = document.getElementById('sadness').onclick = function () {
+        document.querySelector('#message').value += Sadness_avatar;
+    };
+    var Joy_btn = document.getElementById('anger').onclick = function () {
+        document.querySelector('#message').value += Anger_avatar;
+    };
+    var Joy_btn = document.getElementById('disgust').onclick = function () {
+        document.querySelector('#message').value += Disgust_avatar;
+    };
+
+    
  
 
 
