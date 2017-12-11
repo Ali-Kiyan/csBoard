@@ -16,6 +16,9 @@ html {
 body {
   margin: 0;
 }
+.top{
+    margin-top: 20%;
+}
 article,
 aside,
 details,

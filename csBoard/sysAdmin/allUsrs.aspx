@@ -12,7 +12,7 @@
 <p>
          &nbsp;</p>
 
-     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="user_id" DataSourceID="allusersDS" ForeColor="#666666" GridLines="None" CssClass="table table-striped table-bordered table-condensed table-hover table-responsive pull-right animated flipInX" Width="70%" Font-Italic="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="user_id" DataSourceID="allusersDS" ForeColor="#666666" GridLines="None" CssClass="table table-striped table-bordered table-condensed table-hover table-responsive pull-right animated flipInX top col-md-10"  Font-Italic="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
          <Columns>
              <asp:CommandField HeaderText="Edit/Delete Users" ShowDeleteButton="True" ShowEditButton="True" />
