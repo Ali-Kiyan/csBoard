@@ -479,3 +479,6 @@ template {
   background: #ecf0f1;
   transition: 0.6s linear;
 }
+.black{
+    color: black !important;
+}

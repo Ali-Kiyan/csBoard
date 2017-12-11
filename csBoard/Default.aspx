@@ -5,12 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
       <!-- Animation -->
     <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 
 <header id="showcase">
     <div class="animated flipInX">
           <h1>Welcom to csBoard</h1>
           <p>Online interactive board for professional collaboration</p>
-          <a href="Login.aspx" class="button">Enter</a>
+          <a href="Login.aspx" class="button"><i class="fa fa-sign-in" aria-hidden="true"></i> Enter</a>
     </div>
 
 </header>
