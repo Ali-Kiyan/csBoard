@@ -9,7 +9,7 @@
 
 .container {
     background-color: #4a4a4a;
-    border: 75px solid #42363f;
+    border: 1em solid #42363f;
     padding: 20px;
     border-radius: 10px;
 }
@@ -51,7 +51,7 @@ border-radius: 50px !important;
 border: thick solid seagreen;
 }
 .chat-thread #sendmessage{
-    width: 10%;
+    width: 84px;
     padding: 10px;
     height: 100%;
     border: thin;
@@ -60,8 +60,6 @@ border: thick solid seagreen;
 }
 .chat-thread {
   list-style: none;
-  overflow-y: scroll;
-  overflow-x: scroll;
   width: 100%;
 }
 
