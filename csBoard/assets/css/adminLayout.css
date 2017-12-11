@@ -138,8 +138,8 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-  border-radius: 0 !important;
-    height: 27px;
+  border-radius: 0px !important;
+    height: 100%;
 }
 button[disabled],
 html input[disabled] {
