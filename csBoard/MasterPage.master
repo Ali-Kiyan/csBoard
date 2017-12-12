@@ -9,7 +9,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
 
@@ -19,9 +18,8 @@
     <!-- Animation -->
     <link rel="stylesheet" href="/assets/css/animate.css">
 
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -82,7 +80,6 @@
     <script src="/assets/js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="/assets/js/jquery-3.2.1.min.js"></script>
     <script src="/assets/js/bootstrap.min.js"></script>
 
 </body>
