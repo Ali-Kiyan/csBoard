@@ -36,10 +36,16 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
             file_uploader.PostedFile.SaveAs(Server.MapPath("~/assets/files/") + file_uploader.FileName);
 
             SqlCommand cmd = new SqlCommand("INSERT INTO files (filename,filePath,fileSize,fileType,user_id) values('" + file_uploader.FileName + "','" + "~/assets/files/" + file_uploader.FileName + "'," + file_uploader.PostedFile.ContentLength + ",'" + file_uploader.PostedFile.ContentType + "'," + Session["user_id"] + ")", con);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                lbl_result.Text = System.Convert.ToString(err);
+                lbl_result.CssClass = "alert alert-danger animated bounceInDown";
+            }
             con.Close();
-            lbl_result.Text = "Successfully added";
-
         }
         else
         {

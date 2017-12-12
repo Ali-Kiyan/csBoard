@@ -56,15 +56,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/Default.aspx">csBoard</a>
+          <a class="navbar-brand white" href="/Default.aspx"><i class="fa fa-terminal" aria-hidden="true"></i> csBoard</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">csStaff <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">csStaff <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/logout.aspx">Logout</a></li>
+                <li><a href="/logout.aspx" class="black"><i class="fa fa-sign-out black" aria-hidden="true"></i> Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -76,7 +76,7 @@
           <div class="sidebar-nav navbar-collapse">
               <ul class="nav" id="side-menu" style="background-color:#303030;" >
                   <li>
-                      <a href="/sysAdmin/AdminDashboard.aspx"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                      <a href="/ProjectManager/ProjectManagerDashboard.aspx"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                   </li>
                   <li>
                       <a href="#"><i class="fa fa-file-archive-o fa-fw"></i> Files<span class="fa arrow"></span></a>
@@ -86,25 +86,6 @@
                           </li>
                           <li>
                               <a href="/File/fileRead.aspx">Read Files</a>
-                          </li>
-                      </ul>
-                      <!-- /.nav-second-level -->
-                  </li>
-
-                  <li>
-                      <a href="#"><i class="fa fa-paint-brush fa-fw"></i> Workspace Customization<span class="fa arrow"></span></a>
-                      <ul class="nav nav-second-level">
-                          <li>
-                               
-                                          
-                                              
-                          </li>
-                          <li>
-                              <a href="#">Direction <span class="fa arrow"></span></a>
-                              <ul class="nav nav-third-level">
-                             
-                              </ul>
-                              <!-- /.nav-third-level -->
                           </li>
                       </ul>
                       <!-- /.nav-second-level -->
