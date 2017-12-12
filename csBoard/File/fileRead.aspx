@@ -6,7 +6,7 @@
     <p>
     <br />
 </p>
-<asp:Label ID="lbl_result" runat="server" CssClass="alert animated fadeInLeft"></asp:Label>
+<asp:Label ID="lbl_result" runat="server" CssClass="alert animated fadeInDown"></asp:Label>
 <br />
 <br />
 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="table table-striped table-hover table-responsive table-bordered fadeInUp" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="GridView1_RowCommand">
@@ -43,11 +43,6 @@
 <br />
 <br />
 <br />
-    <style>
-        .btn{
-                padding-bottom: 25px !important;
-        }
-    </style>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT files.filename, files.fileType, files.fileSize, users.name FROM files INNER JOIN users ON files.user_id = users.user_id"></asp:SqlDataSource>
 </asp:Content>
 
