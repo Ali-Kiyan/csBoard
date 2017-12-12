@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="/css/bootstrap-3.3.2-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/assets/css/stylesheet.css">

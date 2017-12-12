@@ -482,3 +482,7 @@ template {
 .black{
     color: black !important;
 }
+.center{
+    margin-left:auto;
+    margin-right:auto;
+}

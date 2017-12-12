@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div style="text-align: center;">
 
-        <div class="animated fadeInUp" style="width: 400px; margin-left: auto; margin-right:auto; padding-top:20%; padding-bottom:5%;background-color:#a5a5a5" >
+        <div class="animated fadeInUp" style="width: 400px; margin-left: auto; margin-right:auto; padding-top:20%; padding-bottom:5%;background-color:#84777675;" >
             <asp:FileUpload ID="file_uploader" runat="server" CssClass="input input-group" Width="400px" />
             <asp:Button ID="btn_upload" runat="server" CssClass="btn btn-primary" Text="Upload" Width="201px" OnClick="btn_upload_Click"/>
             <br />
