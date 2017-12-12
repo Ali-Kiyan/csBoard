@@ -13,7 +13,6 @@ public partial class MasterPage : System.Web.UI.MasterPage
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["csBoardDBConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
-   
         // read from db and then apply the customise
         con.Open();
         workspacesTableAdapters.work_SpaceTableAdapter workspaceHandle = new workspacesTableAdapters.work_SpaceTableAdapter();

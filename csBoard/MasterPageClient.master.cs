@@ -21,7 +21,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             if (System.Convert.ToString(Session["user_id"]) == System.Convert.ToString(row["user_id"]))
             {
-                if (row["Font_Size"] != DBNull.Value && row["Colour_Scheme"] != DBNull.Value && row["Direction"] != DBNull.Value)
+                if ((row["Font_Size"] != DBNull.Value) && (row["Colour_Scheme"] != DBNull.Value) && (row["Direction"] != DBNull.Value))
                 {
                     bodyMain.Attributes.CssStyle.Add(HtmlTextWriterStyle.FontSize, System.Convert.ToString(row["Font_Size"]) + "px");
                     bodyMain.Attributes.CssStyle.Add(HtmlTextWriterStyle.BackgroundColor, System.Convert.ToString(row["Colour_Scheme"]));
