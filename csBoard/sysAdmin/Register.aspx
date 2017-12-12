@@ -7,7 +7,7 @@
 
         <div style="text-align: center;">
 
-        <div class="animated fadeInUp" style="width: 300px; margin-left: auto; margin-right:auto; padding-top:20%; padding-bottom:5%; border-radius:50px; background-color:#42312f75;">
+        <div class="animated fadeInDown" style="width: 300px; margin-left: auto; margin-right:auto; padding-top:20%; padding-bottom:5%; border-radius:50px; background-color:#42312f75;">
             &nbsp;<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT role_id FROM roles"></asp:SqlDataSource>
             <asp:TextBox ID="txt_userName" runat="server" CssClass="input-group center" Width="50%" placeholder="please enter your username"></asp:TextBox>
             <asp:TextBox ID="txt_password" runat="server" CssClass="input-group center" Width="50%" placeholder="please enter your password" Type="password"></asp:TextBox>
