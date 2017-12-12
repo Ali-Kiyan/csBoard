@@ -486,3 +486,11 @@ template {
     margin-left:auto;
     margin-right:auto;
 }
+.welcome{
+    border-radius: 50px !important;
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+
+}
