@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Text;
+using System.Security.Cryptography;
+
 
 public partial class Login : System.Web.UI.Page
 {
@@ -24,7 +27,7 @@ public partial class Login : System.Web.UI.Page
     {
         usersTableAdapters.usersTableAdapter userHandle = new usersTableAdapters.usersTableAdapter();
         users.usersDataTable userstable = userHandle.GetData();
-        foreach(DataRow row in userstable.Rows)
+        foreach (DataRow row in userstable.Rows)
         {
             if (txt_user.Text == System.Convert.ToString(row["username"]) && txt_pass.Text == System.Convert.ToString(row["password"]))
             {
@@ -87,8 +90,19 @@ public partial class Login : System.Web.UI.Page
         }
         else
         {
-            lbl_result.Text = "username and/or password does not match, Please try again";
+            lbl_result.Text = SetHash(txt_pass.Text);
         }
     }
-
+    protected string SetHash(string text)
+    {
+        SHA1CryptoServiceProvider sh = new SHA1CryptoServiceProvider();
+        sh.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+        byte[] re = sh.Hash;
+        StringBuilder sb = new StringBuilder();
+        foreach(byte b in re)
+        {
+            sb.Append(b.ToString("0x2"));
+        }
+        return sb.ToString();
+    }
 }
