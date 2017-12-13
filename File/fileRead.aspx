@@ -43,6 +43,6 @@
 <br />
 <br />
 <br />
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT files.filename, files.fileType, files.fileSize, users.name FROM files INNER JOIN users ON files.user_id = users.user_id"></asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT files.filename, files.fileType, files.fileSize, users.name FROM files INNER JOIN users ON files.user_id = users.user_id" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
 </asp:Content>
 
