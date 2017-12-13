@@ -19,7 +19,8 @@
             <button id="fear"  type="button" class="btn overlapped btn-avatar" >😨</button>
             <button id="sadness" type="button" class="btn overlapped btn-avatar">😢</button>
             <button id="anger" type="button" class="btn overlapped btn-danger btn-avatar">😡</button>
-            <button id="disgust"  type="button" class="btn overlapped btn-avatar">😒</button>
+            <button id="disgust"  type="button" class="btn overlapped btn-avatar">😒
+            </button>
         </div>
         <ul id="discussion">
         </ul>

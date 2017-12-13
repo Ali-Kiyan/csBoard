@@ -14,12 +14,12 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
- 
+
         lbl_result.Text = System.Convert.ToString(file_uploader);
         con.Open();
         if (System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2 || System.Convert.ToInt32(Session["role_id"]) == 3)
         {
-            lbl_result.CssClass = "alert-info";
+            lbl_result.CssClass = "alert alert-info welcome animated flipInX";
             lbl_result.Text = "Share your file here";
 
         }
@@ -39,10 +39,12 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
             try
             {
                 cmd.ExecuteNonQuery();
+                lbl_result.Text = "File has been successfully added";
             }
             catch (Exception err)
             {
                 lbl_result.Text = System.Convert.ToString(err);
+                lbl_result.CssClass = "alert alert-info welcome animated flipInX";
                 lbl_result.CssClass = "alert alert-danger animated bounceInDown";
             }
             con.Close();

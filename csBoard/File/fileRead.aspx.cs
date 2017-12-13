@@ -46,11 +46,20 @@ public partial class File_fileRead : System.Web.UI.Page
         {
             //clearing any response
             Response.Clear();
-            System.IO.File.Delete(Server.MapPath("~/assets/files/") + e.CommandArgument);
-            SqlCommand cmd = new SqlCommand("DELETE TOP(1) FROM files WHERE filename = '" + e.CommandArgument + "'", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-            Response.Redirect("/File/fileRead.aspx");
+            if(System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2)
+            {
+                System.IO.File.Delete(Server.MapPath("~/assets/files/") + e.CommandArgument);
+                SqlCommand cmd = new SqlCommand("DELETE TOP(1) FROM files WHERE filename = '" + e.CommandArgument + "'", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Redirect("/File/fileRead.aspx");
+            }
+            else
+            {
+                lbl_result.CssClass = "alert alert-danger animated fadeInLeft welcome";
+                lbl_result.Text = "You don't have the right access";
+            }
+
         }
     }
 }
