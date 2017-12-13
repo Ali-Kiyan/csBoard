@@ -34,13 +34,22 @@ public partial class File_fileRead : System.Web.UI.Page
     {
       
         if (e.CommandName == "Download")
-        {
-            //clearing any response
-            Response.Clear();
-            Response.ContentType = "application/octect-stream";
-            Response.AppendHeader("content-disposition", "filename=" + e.CommandArgument);
-            Response.TransmitFile(Server.MapPath("~/assets/files/") + e.CommandArgument);
-            Response.End();
+        {   
+            if(System.Convert.ToInt32(Session["role_id"]) == 3)
+            {
+                lbl_result.CssClass = "alert alert-danger animated fadeInLeft welcome";
+                lbl_result.Text = "You don't have the right access";
+            }
+            else
+            {
+                //clearing any response
+                Response.Clear();
+                Response.ContentType = "application/octect-stream";
+                Response.AppendHeader("content-disposition", "filename=" + e.CommandArgument);
+                Response.TransmitFile(Server.MapPath("~/assets/files/") + e.CommandArgument);
+                Response.End();
+            }
+
         }
         if(e.CommandName == "deleteFile")
         {
