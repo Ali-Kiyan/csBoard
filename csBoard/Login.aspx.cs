@@ -90,19 +90,8 @@ public partial class Login : System.Web.UI.Page
         }
         else
         {
-            lbl_result.Text = SetHash(txt_pass.Text);
+            lbl_result.Text = "Username/Password does not exists in database";
         }
     }
-    protected string SetHash(string text)
-    {
-        SHA1CryptoServiceProvider sh = new SHA1CryptoServiceProvider();
-        sh.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
-        byte[] re = sh.Hash;
-        StringBuilder sb = new StringBuilder();
-        foreach(byte b in re)
-        {
-            sb.Append(b.ToString("0x2"));
-        }
-        return sb.ToString();
-    }
+
 }
