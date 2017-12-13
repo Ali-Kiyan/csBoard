@@ -17,7 +17,7 @@ public partial class sysAdmin_fileUpload : System.Web.UI.Page
  
         lbl_result.Text = System.Convert.ToString(file_uploader);
         con.Open();
-        if (System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2)
+        if (System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2 || System.Convert.ToInt32(Session["role_id"]) == 3)
         {
             lbl_result.CssClass = "alert-info";
             lbl_result.Text = "Share your file here";
