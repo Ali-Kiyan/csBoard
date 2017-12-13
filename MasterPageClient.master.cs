@@ -36,10 +36,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
 
     }
-    
+
     protected void Theme1(object sender, EventArgs e)
     {
-        SqlCommand cmd = new SqlCommand("INSERT INTO work_Space (Font_Size, Colour_Scheme, Direction, user_id) VALUES ('15', '#2c1b1980', 'ltr'," + Session["user_id"].ToString() + ")", con);
+        SqlCommand cmd = new SqlCommand("INSERT INTO work_Space (Font_Size, Colour_Scheme, Direction, user_id) VALUES ('15', '#2c1b19', 'ltr'," + Session["user_id"].ToString() + ")", con);
         cmd.ExecuteNonQuery();
         con.Close();
         redirect();
