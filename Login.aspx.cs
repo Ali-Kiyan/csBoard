@@ -46,7 +46,22 @@ public partial class Login : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (System.Convert.ToInt32(Session["role_id"]) == 1)
+        {
+            Response.Redirect("/sysAdmin/adminDashboard.aspx");
+        }
+        else if (System.Convert.ToInt32(Session["role_id"]) == 2)
+        {
+            Response.Redirect("/ProjectManager/ProjectManagerDashboard.aspx");
+        }
+        else if (System.Convert.ToInt32(Session["role_id"]) == 3)
+        {
+            Response.Redirect("/Designer/DesignerDashboard.aspx");
+        }
+        else if (System.Convert.ToInt32(Session["role_id"]) == 4)
+        {
+            Response.Redirect("/Client/ClientDashboard.aspx");
+        }
 
     }
 
