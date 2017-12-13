@@ -1,0 +1,31 @@
+/* Header */
+body{
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+}
+.large-header {
+  width: 100%;
+  background: #222;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Dosis', sans-serif;
+}
+
+.main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .demo-1 .main-title {
+    font-size: 3em;
+  }
+}
