@@ -13,7 +13,10 @@ public partial class sysAdmin_Register : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-   
+        if (System.Convert.ToInt32(Session["role_id"]) != 1)
+        {
+            Response.Redirect("/Login.aspx", true);
+        }
     }
 
     protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)

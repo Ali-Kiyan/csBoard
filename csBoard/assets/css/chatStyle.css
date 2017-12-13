@@ -24,7 +24,10 @@
 border: thin;
 border-radius: 50px !important;
 }
-
+.btn-avatar:hover{
+    font-size:2em;
+    transition: 1s linear;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
