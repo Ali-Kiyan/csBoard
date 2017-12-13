@@ -16,11 +16,11 @@
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:csBoardDBConnectionString %>" SelectCommand="SELECT [username], [password], [name], [role_id] FROM [users]"></asp:SqlDataSource>
             <asp:Label ID="Label1" runat="server" Text="role ID" style="font-size: 2rem;color: whitesmoke; margin-left:auto; margin-right:auto;"></asp:Label>
             <br />
-            <asp:DropDownList Width="50%" ID="RoleDropDown" runat="server" DataSourceID="SqlDataSource1" DataTextField="role_id" DataValueField="role_id" CssClass="input center" >
+            <asp:DropDownList Width="61px" ID="RoleDropDown" runat="server" DataSourceID="SqlDataSource1" DataTextField="role_id" DataValueField="role_id" CssClass="input center" >
             <asp:ListItem Selected="True">True</asp:ListItem>
             </asp:DropDownList>
             <br />
-            <asp:Button ID="submit" runat="server" Text="Submit !" OnClick="submit_Click" CssClass="input-group  btn btn-primary center" Width="50%"/>
+            <asp:Button ID="submit" runat="server" Text="Submit !" OnClick="submit_Click" CssClass="input-group  btn btn-primary center" Width="60%"/>
              <asp:Label ID="Lbl_result" runat="server" Text="" Width="100%" style="overflow: hidden"></asp:Label>
          </div>
         </div>

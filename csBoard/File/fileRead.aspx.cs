@@ -14,9 +14,9 @@ public partial class File_fileRead : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         con.Open();
-        if (System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2 ) 
+        if (System.Convert.ToInt32(Session["role_id"]) == 1 || System.Convert.ToInt32(Session["role_id"]) == 2 || System.Convert.ToInt32(Session["role_id"]) == 3 ) 
         {
-            lbl_result.CssClass = "alert alert-info";
+            lbl_result.CssClass = "alert alert-warning animated flipInX welcome";
             lbl_result.Text = "All files in the database"; 
 
         }
