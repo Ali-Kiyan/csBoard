@@ -14,7 +14,7 @@ public partial class csChat : System.Web.UI.Page
         {
             Response.Redirect("/Login.aspx", true);
         }
-
+        nameTaker.Value = System.Convert.ToString(Session["username"]);
     }
 
 

@@ -13,6 +13,7 @@
         <input type="text" id="message" class="animated bounceInLeft"/>
         <input type="button" id="sendmessage" class="animated bounceInRight" value="Send" />
         <input type="hidden" id="displayname" />
+        <input type="hidden" id="nameTaker" runat="server"/>
         <div class="animated fadeInRight avatar">
             <button id="joy" type="button" class="btn overlapped btn-success btn-avatar">😂</button>
             <button id="surprise" type="button" class="btn overlapped btn-avatar">😱</button>
@@ -24,7 +25,7 @@
         </div>
         <ul id="discussion">
         </ul>
-        
+
     </div>
 
 </asp:Content>

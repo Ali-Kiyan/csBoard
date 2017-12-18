@@ -1,31 +1,32 @@
 ﻿    $(function () {
-        // Declare a proxy to reference the hub. 
+        // Declare a proxy to reference the hub.
         var chat = $.connection.chatHub;
         // Create a function that the hub can call to broadcast messages.
         chat.client.broadcastMessage = function (name, message) {
-            // Html encode display name and message. 
+            // Html encode display name and message.
             var encodedName = $('<div />').text(name).html();
             var encodedMsg = $('<div />').text(message).html();
-            // Add the message to the page. 
+            // Add the message to the page.
             $('#discussion').append('<li><strong>' + encodedName
                 + '</strong>&nbsp:&nbsp;&nbsp;' + encodedMsg + '</li>');
         };
         // Get the user name and store it to prepend to messages.
-        $('#displayname').val(prompt('Enter your name:', ''));
-        // Set initial focus to message input box.  
+        var Uname = $('#ContentPlaceHolder1_nameTaker').val();
+        $('#displayname').val(Uname);
+        // Set initial focus to message input box.
         $('#message').focus();
         // Start the connection.
         $.connection.hub.start().done(function () {
             $('#sendmessage').click(function () {
-                // Call the Send method on the hub. 
+                // Call the Send method on the hub.
                 chat.server.send($('#displayname').val(), $('#message').val());
-                // Clear text box and reset focus for next comment. 
+                // Clear text box and reset focus for next comment.
                 $('#message').val('').focus();
             });
         });
     });
 
-   //Avatars Definition 
+   //Avatars Definition
     var Joy_avatar = String.fromCodePoint(0x1F602);
     var Surprise_avatar = String.fromCodePoint(0x1F631);
     var Fear_avatar = String.fromCodePoint(0x1F628);
@@ -51,8 +52,3 @@
     var Joy_btn = document.getElementById('disgust').onclick = function () {
         document.querySelector('#message').value += Disgust_avatar;
     };
-
-    
- 
-
-

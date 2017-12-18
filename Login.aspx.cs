@@ -32,6 +32,7 @@ public partial class Login : System.Web.UI.Page
                 lbl_result.Text = System.Convert.ToString(row["username"]);
                 role_id = System.Convert.ToString(row["role_id"]);
                 user_id = System.Convert.ToInt32(row["user_id"]);
+                Session["username"] = System.Convert.ToString(row["username"]);
                 Session["role_id"] = role_id;
                 Session["user_id"] = user_id;
                 return true;
@@ -81,7 +82,7 @@ public partial class Login : System.Web.UI.Page
             if (role_id == "1")
             {
                 System.Web.Security.FormsAuthentication.RedirectFromLoginPage(txt_user.Text, false);
-                Response.Redirect("/sysAdmin/adminDashboard.aspx"); 
+                Response.Redirect("/sysAdmin/adminDashboard.aspx");
             }
             if (role_id == "2")
             {
