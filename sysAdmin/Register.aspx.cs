@@ -26,7 +26,7 @@ public partial class sysAdmin_Register : System.Web.UI.Page
 
     protected void submit_Click(object sender, EventArgs e)
     {
-        SqlCommand cmd = new SqlCommand("INSERT INTO users (username, password, name, role_id) values ('" + txt_userName.Text + "', EncryptByPassPhrase('december','" + txt_password.Text + "'),'" + txt_name.Text + "','" + RoleDropDown.SelectedItem.Text + "')", con);
+        SqlCommand cmd = new SqlCommand("INSERT INTO users (username, password, name, role_id) values ('" + txt_userName.Text + "', EncryptByPassPhrase('december',convert(NVARCHAR(50),'" + txt_password.Text + "')),'" + txt_name.Text + "','" + RoleDropDown.SelectedItem.Text + "')", con);
         try
         {
             con.Open();
